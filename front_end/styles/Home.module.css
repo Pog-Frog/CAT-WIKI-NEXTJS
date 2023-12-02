@@ -1,0 +1,91 @@
+/* Home.module.css */
+.CatWikiWelcomeContainer {
+  height: 600px;
+  position: relative;
+}
+
+.catImage {
+  border-radius: 42px 42px 0 0;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.catContent {
+  position: absolute;
+  z-index: 1;
+  color: white;
+  top: 115px;
+  left: 108px;
+  width: 394.6px;
+}
+
+.catLogo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.catContent img {
+  border-radius: 0 0 0 0;
+  margin-bottom: 11px;
+}
+
+.catText {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  width: 371.3px;
+  color: #ffffff;
+  margin-bottom: 52px;
+}
+
+@media (max-width: 768px) {
+  .catContent {
+    top: 21px;
+    left: 29px;
+    width: 50%;
+  }
+
+  .catContent img {
+    width: 50%;
+  }
+
+  .catText {
+    margin-bottom: 20px;
+  }
+
+  .CatWikiWelcomeContainer {
+    height: 250px;
+  }
+}
+
+.BreedSearcherForm {
+  width: 100%;
+  height: 69.67px;
+  position: relative;
+  cursor: pointer;
+}
+
+.searchInput {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  border-radius: 59px;
+  padding-left: 28.6px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  cursor: pointer;
+}
+
+.BreedSearcherForm span {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 28.6px;
+  width: 28.6px;
+  display: flex;
+  align-items: center;
+  color: #291507;
+}
