@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Services\TheCatAPIServices\BreedsService;
+use App\Services\TheCatAPIServices\TheCatAPIService;
 
 class Cat extends Model
 {
@@ -67,16 +68,11 @@ class Cat extends Model
     public function fillCatBreedsDatabase()
     {
         try {
-            $breedsService = new BreedsService(
-                env('THE_CAT_API_KEY'),
-                env('THE_CAT_API_URL')
-            );
+            $theCatAPIService = new TheCatAPIService(env('THE_CAT_API_KEY'), env('THE_CAT_API_URL'));
+
+            $breedsService = new BreedsService($theCatAPIService);
 
             $response = $breedsService->getAllCatBreeds();
-
-            if ($breedsService->error) {
-                return false;
-            }
 
             $breeds = $response['data'];
 
